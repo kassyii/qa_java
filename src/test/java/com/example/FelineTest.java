@@ -1,22 +1,15 @@
 package com.example;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 class FelineTest {
 
 
-    //eatMeat передадим "Хищник" . Exception можно не проверять т.к. всегда передаем "Хищник"
     @Test
     void eatMeatReturnsPredator() throws Exception {
         Feline feline = new Feline();
@@ -26,15 +19,6 @@ class FelineTest {
     }
 
     @Test
-    void eatMeatReturnsException() throws Exception {
-        Feline feline = new Feline();
-        List<String> actual = feline.eatMeat();
-        List<String> expected = feline.getFood("Хищник");
-        assertEquals(expected,actual, () -> "Expected: " + expected + ", but actual: " + actual);
-    }
-
-    //getFamily
-    @Test
     void getFamilyReturnsFelines() {
         Feline feline = new Feline();
         String actual = feline.getFamily();
@@ -42,7 +26,6 @@ class FelineTest {
         assertEquals(expected,actual, () -> "Expected: " + expected + ", but actual: " + actual);
     }
 
-    //getKittens метод без аргументов
     @Test
     void getKittensWithoutCount() {
         Feline feline = new Feline();
@@ -51,7 +34,6 @@ class FelineTest {
         assertEquals(expected,actual, () -> "Expected: " + expected + ", but actual: " + actual);
     }
 
-    //testGetKittens метод с целым числом. Передадим 0, >0
     @Test
     void testGetKittensCountGreaterZero() {
         Feline feline = new Feline();
@@ -67,8 +49,6 @@ class FelineTest {
         int expected = 0;
         assertEquals(expected,actual, () -> "Expected: " + expected + ", but actual: " + actual);
     }
-
-    // тесты для getFood. Передадим: "Хищник","Травоядное", "Рыба", null
 
     @Test
     void getFoodHerbivoreSuccess() throws Exception {

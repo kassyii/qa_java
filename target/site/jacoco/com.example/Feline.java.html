@@ -24,11 +24,9 @@ import java.util.List;
 <span class="fc" id="L24">        return kittensCount;</span>
     }
 
-    //Переопределил метод и сделал реализацию из Animal
-    //Сделанно так из-за созданного интерфейса Felines , а т.к. изначально не было метода Feline.getFood() , то дал ему логику из наследуемого класса
     @Override
     public List&lt;String&gt; getFood(String felineKind) throws Exception {
-<span class="fc" id="L31">        return  super.getFood(felineKind);</span>
+<span class="fc" id="L29">        return  super.getFood(felineKind);</span>
     }
 
 }

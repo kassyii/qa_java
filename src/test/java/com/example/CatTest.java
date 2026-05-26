@@ -1,8 +1,6 @@
 package com.example;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -19,7 +17,6 @@ class CatTest {
     @Mock
     Feline feline;
 
-    //передал мок, что бы не зависит от Feline, т.к. в конструкторе Cat передается Feline
     @Test
     void getSoundSuccess() {
         Cat cat = new Cat(feline);

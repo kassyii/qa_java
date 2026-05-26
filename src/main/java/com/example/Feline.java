@@ -24,8 +24,6 @@ public class Feline extends Animal implements Predator,Felines {
         return kittensCount;
     }
 
-    //Переопределил метод и сделал реализацию из Animal
-    //Сделанно так из-за созданного интерфейса Felines , а т.к. изначально не было метода Feline.getFood() , то дал ему логику из наследуемого класса
     @Override
     public List<String> getFood(String felineKind) throws Exception {
         return  super.getFood(felineKind);
